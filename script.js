@@ -1,3 +1,9 @@
-var Jennifer : {
-    
-}
+/*****
+ * 1
+ */
+
+day = new Date();
+localtime = day.toString();
+
+
+console.log('Today is : ' + day);
