@@ -7,3 +7,6 @@ localtime = day.toString();
 
 
 console.log('Today is : ' + day);
+
+
+
