@@ -313,52 +313,153 @@
 //     return arr.pop();
 //   }
 
-////////////////////////////
+// ////////////////////////////
 
-Find the Index
-Create a function that takes an array and a string as arguments and return the index of the string.
+// Find the Index
+// Create a function that takes an array and a string as arguments and return the index of the string.
 
-Examples
-find_index(["hi", "edabit", "fgh", "abc"], "fgh") ➞ 2
+// Examples
+// find_index(["hi", "edabit", "fgh", "abc"], "fgh") ➞ 2
 
-find_index(["Red", "blue", "Blue", "Green"], "blue") ➞ 1
+// find_index(["Red", "blue", "Blue", "Green"], "blue") ➞ 1
 
-find_index(["a", "g", "y", "d"], "d") ➞ 3
+// find_index(["a", "g", "y", "d"], "d") ➞ 3
 
-find_index(["Pineapple", "Orange", "Grape", "Apple"], "Pineapple") ➞ 0
-
-
-const find_index = (arr, str)=> arr.indexOf(str); 
+// find_index(["Pineapple", "Orange", "Grape", "Apple"], "Pineapple") ➞ 0
 
 
-function find_index(lst, str) {
-	for (let i = 0; i < lst.length; i++) {
-		if (lst[i] === str) {
-			return i;
-		}
-	}
-}
-
-//////////////////////////
-
-Check if an Array Contains a Given Number
-Write a function to check if an array contains a particular number.
-
-Examples
-check([1, 2, 3, 4, 5], 3) ➞ true
-
-check([1, 1, 2, 1, 1], 3) ➞ false
-
-check([5, 5, 5, 6], 5) ➞ true
-
-check([], 5) ➞ false
+// const find_index = (arr, str)=> arr.indexOf(str); 
 
 
+// function find_index(lst, str) {
+// 	for (let i = 0; i < lst.length; i++) {
+// 		if (lst[i] === str) {
+// 			return i;
+// 		}
+// 	}
+// }
+
+// //////////////////////////
+
+// Check if an Array Contains a Given Number
+// Write a function to check if an array contains a particular number.
+
+// Examples
+// check([1, 2, 3, 4, 5], 3) ➞ true
+
+// check([1, 1, 2, 1, 1], 3) ➞ false
+
+// check([5, 5, 5, 6], 5) ➞ true
+
+// check([], 5) ➞ false
+
+
+// const check = (arr, el)=> arr.includes(el);
+
+// ///////////////////////////
+// Compare Strings by Count of Characters
+// Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+
+// Examples
+// comp("AB", "CD") ➞ true
+
+// comp("ABC", "DE") ➞ false
+
+// comp("hello", "edabit") ➞ false
+
+// const comp = (str1, str2) => str1.length === str2.length;
+
+// //////////////////////////
+// Is the Number Even or Odd?
+// Create a function that takes a number as an argument and returns "even" for even numbers and "odd" for odd numbers.
+
+// Examples
+// isEvenOrOdd(3) ➞ "odd"
+
+// isEvenOrOdd(146) ➞ "even"
+
+// isEvenOrOdd(19) ➞ "odd"
+
+// const isEvenOrOdd = (num) => {
+// 	if(num%2 === 0) {
+// 		return 'even';
+// 	} else{
+// 		return 'odd';
+// 	}
+// };
+
+// function isEvenOrOdd(num) {
+//     return num % 2 ? 'odd' : 'even';
+//   }
+// // ////////////////////////////////
+// Return the Total Number of Parameters
+// Create a function that returns the total number of parameters passed in.
+
+// Examples
+// numberArgs("a", "b", "c") ➞ 3
+
+// numberArgs(10, 20, 30, 40, 50) ➞ 5
+
+// numberArgs(x, y) ➞ 2
+
+// numberArgs() ➞ 0
+
+
+// function numberArgs() {
+// 	return arguments.length;
+// }
+
+// const numberArgs = (...args) => args.length;
+
+// function numberArgs(size) {
+// 	return arguments.length;
+// }
+
+// function numberArgs(/* fill-in */) {
+// 	return arguments.length
+// }
+
+// ///////////////////////////
+
+// Extract City Facts
+// Create a function that takes an object as an argument and returns a string with facts about the city. The city facts will need to be extracted from the object's three properties:
+
+// name
+// population
+// continent
+// The string should have the following format: X has a population of Y and is situated in Z (where X is the city name, Y is the population and Z is the continent the city is situated in).
+
+// Examples
+// cityFacts({
+//   name: "Paris",
+//   population: "2,140,526",
+//   continent: "Europe"
+// }) ➞ "Paris has a population of 2,140,526 and is situated in Europe"
+
+// cityFacts({
+//   name: "Tokyo",
+//   population: "13,929,286",
+//   continent: "Asia"
+// }) ➞ "Tokyo has a population of 13,929,286 and is situated in Asia"
+
+// const cityFacts = (city) => `${city.name} has a population of ${city.population} and is situated in ${city.continent}`;
+
+// ///////////////////////////
+// Char-to-ASCII
+// Create a function that returns the ASCII value of the passed in character.
+
+// Examples
+// ctoa("A") ➞ 65
+
+// ctoa("m") ➞ 109
+
+// ctoa("[") ➞ 91
+
+// ctoa("\") ➞ 92
 
 
 
-
-
+// const ctoa = (c)=> c.charCodeAt();
 
 
 
