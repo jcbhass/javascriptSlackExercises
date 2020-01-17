@@ -448,7 +448,6 @@
 // Char-to-ASCII
 // Create a function that returns the ASCII value of the passed in character.
 
-// Examples
 // ctoa("A") ➞ 65
 
 // ctoa("m") ➞ 109
@@ -460,6 +459,64 @@
 
 
 // const ctoa = (c)=> c.charCodeAt();
+
+//const ctoa = char => char.charCodeAt(0);
+
+// /////////////////////////
+// Is the Lamp On?
+// Your job is to find out whether the lamp is on or off.
+
+// Check the tests tab to find out what you have to do to make this work.
+
+// const lampStatus = () => lamp === 'on';
+
+// function lampStatus() {
+// 	return lamp ==='off' ? false : true;
+// }
+
+///////////////////////////
+
+// Free Coffee Cups
+// Per 6 coffee cups I buy, I get a 7th cup free. In total, I get 7 cups. Create a function that takes n cups bought and return as an integer the total number of cups I would get.
+
+// Examples
+// totalCups(6) ➞ 7
+
+// totalCups(12) ➞ 14
+
+// totalCups(213) ➞ 248
+
+
+// const totalCups = (n) => {
+// 	let free = Math.floor(n/6);
+// 	let total = free + n;
+// 	return total;
+// }
+
+// function totalCups(n) {
+//     return n + Math.floor(n / 6)
+// }
+
+//const totalCups = num => num + Math.floor(num / 6);
+
+////////////////////////////
+Last character of firstname
+Create a function that takes a string as an argument. The string is a random name.
+
+If the last character of the name is an 'n', return true.
+If the last character of the name is not an 'n', return false.
+Examples
+isLastCharacterN('Aiden') ➞ true
+
+isLastCharacterN('Piet')  ➞ false
+Notes
+The function must return a boolean value (true, false).
+
+const isLastCharacterN = (word) => (word[word.length-1] === 'n');
+
+
+...word.pop() == 'n'
+
 
 
 
