@@ -518,6 +518,171 @@ const isLastCharacterN = (word) => (word[word.length-1] === 'n');
 ...word.pop() == 'n'
 
 
+//////////////////////////
+Is the Word Singular or Plural?
+Create a function that takes in a word and determines whether or not it is plural. A plural word is one that ends in "s".
+
+Examples
+isPlural("changes") ➞ true
+
+isPlural("change") ➞ false
+
+isPlural("dudes") ➞ true
+
+isPlural("magic") ➞ false
+Notes
+Don't forget to return the result.
+Remember that return true (boolean) is not the same as return "true" (string).
+This is an oversimplification of the English language. We are ignoring edge cases like "goose" and "geese", "fungus" and "fungi", etc.
+If you get stuck on a challenge, find help in the Resources tab.
+If you're really stuck, unlock solutions in the Solutions tab.
+
+
+function isPlural(word) {
+	return word[word.length-1] === 's';
+}
+
+const isPlural = word => word.endsWith('s');
+
+////////////////////////
+
+Coding Website Score Calculator
+Imagine you run a website that presents users with different coding challenges in levels Easy, Medium, and Hard, where users get points for completing challenges. An Easy challenge is worth 5 points, a Medium challenge is worth 10 points, and a Hard challenge is worth 20 points.
+
+Create a function that takes in the number of each challenge level a user has played and calculates the user's total number of points. Keep in mind that a user cannot complete negative challenges, so the function should return the string "invalid" if any of the passed parameters are negative.
+
+Examples
+scoreCalculator(1, 2, 3) ➞ 85
+
+scoreCalculator(1, 0, 10) ➞ 205
+
+scoreCalculator(5, 2, -6) ➞ "invalid"
+
+
+
+const scoreCalculator = (easy, med, hard) => {
+	if (easy * med * hard < 0) {
+		return 'invalid';
+	} else {
+		return easy * 5 + med * 10 + hard * 20;
+	}
+}
+
+const scoreCalculator = (easy, med, hard) => {
+	if(easy < 0 || med < 0 || hard < 0) {
+		return 'invalid';
+	}
+	return easy*5+med*10+hard*20;
+};
+
+
+/////////////////////////////
+Get Word Count
+Create a function that takes a string and returns the word count. The string will be a sentence.
+
+Examples
+countWords("Just an example here move along") ➞ 6
+
+countWords("This is a test") ➞ 4
+
+countWords("What an easy task, right") ➞ 5
+Notes
+If you get stuck on a challenge, find help in the Resources tab.
+If you're really stuck, unlock solutions in the Solutions tab.
+
+
+function countWords(str) {
+    return str.split(" ").length;
+}
+
+//////////////////////////////
+Find the Total Number of Digits the Given Number Has
+Create a function that takes a number as an argument and returns the amount of digits it has.
+
+Examples
+findDigitAmount(123) ➞ 3
+
+findDigitAmount(56) ➞ 2
+
+findDigitAmount(7154) ➞ 4
+
+findDigitAmount(61217311514) ➞ 11
+
+findDigitAmount(0) ➞ 1
+
+
+function findDigitAmount(num) {
+	return num.toString().length;
+}
+
+const findDigitAmount = num => String(num).length;
+
+////////////////////////////////
+Negate the Array of Numbers
+Given an array of numbers, negate all elements contained within.
+
+Negating a positive value -+n will return -n, because all +'s are removed.
+Negating a negative value --n will return n, because the first - turns the second minus into a +.
+Examples
+negate([1, 2, 3, 4]) ➞ [-1, -2, -3, -4]
+
+negate([-1, 2, -3, 4]) ➞ [1, -2, 3, -4]
+
+negate([]) ➞ []
+
+function negate(arr) {
+	return arr.map(value => -value);
+}
+
+
+/////////////////////////////
+The 3 Programmers Problem
+You hired three programmers and you (hopefully) pay them. Create a function that takes three numbers (the hourly wage of each programmer) and returns the difference between the highest-paid programmer and the lowest-paid.
+
+Examples
+programmers(147, 33, 526) ➞ 493
+
+programmers(33, 72, 74) ➞ 41
+
+programmers(1, 5, 9) ➞ 8
+
+function programmers(one, two, three) {
+	return Math.max(one, two, three) - Math.min(one, two, three);
+}
+
+const programmers = (...salaries) =>
+  Math.max(...salaries) - Math.min(...salaries);
+
+//////////////////////
+
+Check if Number is within a Given Range
+Given a number and an object with min and max properties, return true if the number lies within the given range (inclusive).
+
+Examples
+isInRange(4, { min: 0, max: 5 }) ➞ true
+
+isInRange(4, { min: 4, max: 5 }) ➞ true
+
+isInRange(4, { min: 6, max: 10 }) ➞ false
+
+isInRange(5, { min: 5, max: 5 }) ➞ true
+
+function isInRange(num, range) {
+	if (num >= range.min && num <= range.max){
+		return true;
+	} else {
+		return false;
+	}
+}
+
+const isInRange=(num, range)=> 
+	num >= range.min && num<= range.max && true
+
+
+
+
+
+
 
 
 
