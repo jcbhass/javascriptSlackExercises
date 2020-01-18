@@ -679,6 +679,140 @@ const isInRange=(num, range)=>
 	num >= range.min && num<= range.max && true
 
 
+/////////////////////////
+Missing Third Angle
+You are given 2 out of 3 angles in a triangle, in degrees.
+
+Write a function that classifies the missing angle as either "acute", "right", or "obtuse" based on its degrees.
+
+An acute angle is less than 90 degrees.
+A right angle is exactly 90 degrees.
+An obtuse angle is greater than 90 degrees (but less than 180 degrees).
+For example: missingAngle(11, 20) should return "obtuse", since the missing angle would be 149 degrees, which makes it obtuse.
+
+Examples
+missingAngle(27, 59) ➞ "obtuse"
+
+missingAngle(135, 11) ➞ "acute"
+
+missingAngle(45, 45) ➞ "right"
+
+const missingAngle = (angle1, angle2) => {
+    const angle3 = 180 - angle1 - angle2;
+    return angle3 > 90 ? 'obtuse' : angle3 < 90 ? 'acute' : 'right';
+  };
+
+function missingAngle(angle1, angle2) {
+if(180 - (angle1+angle2)< 90){
+    return "acute";
+}else if(180-(angle1+angle2)>90){
+    return "obtuse";
+}else{
+    return "right";
+}
+}
+
+/////////////////////////
+Date Format
+Create a function that converts a date formatted as MM/DD/YYYY to YYYYDDMM.
+
+Examples
+formatDate("11/12/2019") ➞ "20191211"
+
+formatDate("12/31/2019") ➞ "20193112"
+
+formatDate("01/15/2019") ➞ "20191501"
+Notes
+Return value should be a string.
+
+
+function formatDate(userDate) {
+	let day = userDate.split("/")[0]
+	let month = userDate.split("/")[1]
+	let year = userDate.split("/")[2]
+
+	return year + month + day;
+}
+
+
+const formatDate=u=>
+    u.replace(/(\d+)\/(\d+)\/(\d+)/,`$3`+`$2`+`$1`)
+    
+const formatDate = str => str.split('/').reverse().join('');
+
+function formatDate(date) {
+	const gatDate = new Date(date);
+	return `${gatDate.getFullYear()}${gatDate.getDate()}${gatDate.getMonth()+1 < 10 ? '0'+(gatDate.getMonth()+1) : gatDate.getMonth()+1}`;
+}
+/////////////////////////
+Convert Number to String of Dashes
+Create a function that takes a number (from 1 - 60) and returns a corresponding string of hyphens.
+
+Examples
+Go(1) ➞ "-"
+
+Go(5) ➞ "-----"
+
+Go(3) ➞ "---"
+Notes
+You will be provided integers ranging from 1 to 60.
+Don't forget to return your result as a string.
+If you get stuck on a challenge, find help in the Resources tab.
+If you're really stuck, unlock solutions in the Solutions tab.
+
+function Go(num) {
+	let counter  = '';
+	for (i = 0; i < num; i++) {
+		 counter += '-';
+	}
+	return counter;
+}
+
+const Go = num => '-'.repeat(num);
+
+function Go(num) {
+	return ('-').repeat(num);
+}
+//////////////////////////
+Simple OOP Calculator
+Create functions for the Calculator class that can do the following:
+
+Add two numbers.
+Subtract two numbers.
+Multiply two numbers.
+Divide two numbers.
+Examples
+var calculator = new Calculator()
+
+calculator.add(10, 5) ➞ 15
+
+calculator.subtract(10, 5) ➞ 5
+
+calculator.multiply(10, 5) ➞ 50
+
+calculator.divide(10, 5) ➞ 2
+Notes
+The functions should return the result of the calculation.
+
+
+class Calculator {
+	add = (a, b) => a + b;
+	subtract = (a, b) => a - b;
+	multiply = (a, b) => a * b;
+	divide = (a, b) => a / b;
+}
+
+
+
+class Calculator {
+	add(a,b){return a+b};
+	subtract(a,b){return a-b};
+	multiply(a,b){return a*b};
+	divide(a,b){return a/b};	
+}
+
+/////////////////////////
+cd folder 
 
 
 
@@ -686,3 +820,5 @@ const isInRange=(num, range)=>
 
 
 
+
+ctrl c to stop 
