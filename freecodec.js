@@ -821,4 +821,116 @@ cd folder
 
 
 
-ctrl c to stop 
+ctrl c to stop
+
+
+
+
+///////////////
+////////////Basic JavaScript: Record Collection///////////////
+// Setup
+var collection = {
+	2548: {
+	  album: "Slippery When Wet",
+	  artist: "Bon Jovi",
+	  tracks: [
+		"Let It Rock",
+		"You Give Love a Bad Name"
+	  ]
+	},
+	2468: {
+	  album: "1999",
+	  artist: "Prince",
+	  tracks: [
+		"1999",
+		"Little Red Corvette"
+	  ]
+	},
+	1245: {
+	  artist: "Robert Palmer",
+	  tracks: [ ]
+	},
+	5439: {
+	  album: "ABBA Gold"
+	}
+  };
+  
+  // Only change code below this line
+  function updateRecords(id, prop, value) {
+   if (value === ''){
+	 delete collection[id][prop]
+   } else if ( prop === 'tracks') {
+	  collection[id][prop] = collection[id][prop] || [];
+	  collection[id][prop].push(value);
+	} else {
+	  collection[id][prop] = value;
+	}
+	return collection;
+  }
+  
+  updateRecords(5439, "artist", "ABBA");
+  
+
+///////////Basic JavaScript: Iterate with JavaScript While Loops/////////
+
+  // Setup
+var myArray = [];
+var i = 5;
+while(i >= 0) {
+  myArray.push(i);
+  i--;
+}
+
+console.log(myArray)
+// Only change code below this line
+
+////////Basic JavaScript: Iterate with JavaScript For Loops/////////////
+Basic JavaScript: Iterate with JavaScript For Loops
+You can run the same code multiple times by using a loop.
+
+The most common type of JavaScript loop is called a for loop because it runs "for" a specific number of times.
+
+For loops are declared with three optional expressions separated by semicolons:
+
+for ([initialization]; [condition]; [final-expression])
+
+The initialization statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable.
+
+The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to true. When condition is false at the start of the iteration, the loop will stop executing. This means if condition starts as false, your loop will never execute.
+
+The final-expression is executed at the end of each loop iteration, prior to the next condition check and is usually used to increment or decrement your loop counter.
+
+In the following example we initialize with i = 0 and iterate while our condition i < 5 is true. We'll increment i by 1 in each loop iteration with i++ as our final-expression.
+
+
+// Example
+var ourArray = [];
+
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray = [];
+
+// Only change code below this line
+
+for (var i = 1; i <= 5; i++) {
+  myArray.push(i);
+}
+console.log(myArray)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
